@@ -22,4 +22,55 @@
     height: 100%;
     background-color: black;
   }
+  body {
+    background-color: #0e100f;
+    color: #fffce1;
+    font-family: Avenir, sans-serif;
+  }
+
+  /* Secciones con padding grande */
+  .section {
+    padding: 10rem 0;
+    text-align: center;
+  }
+
+  /* Layout de las cartas */
+  .cards-section {
+    position: relative;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 200px auto;
+  }
+
+  /* Para apilar las tarjetas en el mismo grid cell */
+  .cards {
+    display: grid;
+    margin-top: 3.5rem;
+  }
+  .cards > * {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  /* Estilo de cada tarjeta */
+  .card {
+    width: 300px;
+    height: 250px;
+    background-color: red;
+    border-radius: 8px;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Contenido fijo a la izquierda */
+  .to-stay-card {
+    background-color: red;
+    border-radius: 8px;
+    width: auto;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
