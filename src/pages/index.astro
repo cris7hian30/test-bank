@@ -3,10 +3,36 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import HeroWithVideo from "../components/HeroWithVideo.astro";
 import CardStackGSAP from "../components/CardStackGSAP.tsx";
+import RevealImageText from "../components/RevealImageText.tsx";
+import RequirementsToggle from "../components/RequirementsToggle.tsx";
+import EcosystemProducts from "../components/EcosystemProducts.tsx";
+import RegulatorSection from "../components/RegulatorSection";
+import FAQSection from "../components/FAQSection.tsx";
+import FinalCTA from "../components/FinalCTA.tsx";
 ---
 
 <Layout>
   <Header />
   <HeroWithVideo />
   <CardStackGSAP client:load />
+  <RevealImageText
+    client:load
+    imageUrl="https://images.pexels.com/photos/4240571/pexels-photo-4240571.jpeg"
+    leftText="Fortaleza"
+    rightText="Grandeza"
+    heightClass="h-[800px]"
+  />
+  <RequirementsToggle client:load />
+  <EcosystemProducts client:load />
+  <RegulatorSection client:load />
+  <FAQSection client:load />
+  <FinalCTA
+    client:load
+    primaryAction={() => {
+      /* lógica para recibir llamada */
+    }}
+    secondaryAction={() => {
+      /* lógica para abrir cuenta */
+    }}
+  />
 </Layout>
